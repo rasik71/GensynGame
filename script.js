@@ -11,7 +11,7 @@ let ant = {
   height: 40,
   vy: 0,
   gravity: 0.4,
-  jump: -15,
+  jump: -12.5,
   onGround: true
 };
 
@@ -162,6 +162,7 @@ window.addEventListener("keydown", (e) => {
   if (e.code === "Space" || e.code === "ArrowUp") jump();
 });
 window.addEventListener("touchstart", jump);
+
 
 
 
