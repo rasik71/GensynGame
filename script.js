@@ -126,7 +126,7 @@ function startGame() {
     canvas.style.display = "block";
     gameRunning = true;
     score = 0;
-    gameSpeed = 6;
+    gameSpeed = 1;
     rocks = [];
     ant.y = canvas.height - 100;
     update();
@@ -162,3 +162,4 @@ window.addEventListener("keydown", (e) => {
   if (e.code === "Space" || e.code === "ArrowUp") jump();
 });
 window.addEventListener("touchstart", jump);
+
