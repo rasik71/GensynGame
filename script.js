@@ -10,8 +10,8 @@ let ant = {
   width: 60,
   height: 40,
   vy: 0,
-  gravity: 0.9,
-  jump: -18,
+  gravity: 0.4,
+  jump: -10,
   onGround: true
 };
 
@@ -106,7 +106,7 @@ function update() {
   ctx.fillText("Swarm Energy: " + score, 20, 40);
 
   // gradual speed increase
-  if (score % 1000 === 0) gameSpeed += 0.5;
+  if (score % 1000 === 0) gameSpeed += 0.3;
 
   requestAnimationFrame(update);
 }
@@ -126,7 +126,7 @@ function startGame() {
     canvas.style.display = "block";
     gameRunning = true;
     score = 0;
-    gameSpeed = 1;
+    gameSpeed = 2.5;
     rocks = [];
     ant.y = canvas.height - 100;
     update();
@@ -162,4 +162,5 @@ window.addEventListener("keydown", (e) => {
   if (e.code === "Space" || e.code === "ArrowUp") jump();
 });
 window.addEventListener("touchstart", jump);
+
 
