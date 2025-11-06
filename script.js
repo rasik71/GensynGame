@@ -11,13 +11,13 @@ let ant = {
   height: 40,
   vy: 0,
   gravity: 0.4,
-  jump: -10,
+  jump: -15,
   onGround: true
 };
 
 let rocks = [];
 let score = 0;
-let gameSpeed = 6;
+let gameSpeed = 4;
 let gameRunning = false;
 
 function drawAnt() {
@@ -162,5 +162,6 @@ window.addEventListener("keydown", (e) => {
   if (e.code === "Space" || e.code === "ArrowUp") jump();
 });
 window.addEventListener("touchstart", jump);
+
 
 
